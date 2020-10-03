@@ -1,0 +1,23 @@
+{%extends 'projects/base.html'%}
+
+{%block content%}
+<h1>it's important to not give a shit - george clairion</h1>
+<a></a><audio controls>
+    <source src="C:\Users\Rob\Documents\pythondjango\personal_site\music\temp_media\QNQBP2CWJ9.wav" type = "audio/wav">
+    Your browser does not support the audio element.
+</audio>
+
+<!---<p><h2>media root {{MEDIA_ROOT}}</h2></p> --->
+<p><h2>filename {{filename}}</h2></p>
+
+<form action="writeFile" method="POST">
+    {% csrf_token %}
+    <input type="text" value="" name="note" size="3"/>
+    <input type="submit" class="btn" value="Write Note" name="mybtn">
+   </form>
+
+<form action="closeFile" method="POST">
+    {% csrf_token %}
+    <input type="submit" class="btn" value="Save" name="mybtn">
+   </form>
+{%endblock%}

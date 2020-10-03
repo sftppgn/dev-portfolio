@@ -1,0 +1,24 @@
+{%extends 'projects/base.html'%}
+
+{%block content%}
+<h1>Rob's Portfoilo</h1>
+{%load static%}
+<br>
+<!---
+<a href="{%url 'blog:home' %"}>Blog</a> !--->
+<a href="{%url 'blog:home' %}">Blog</a>
+<br>
+<a href="https://docs.google.com/document/d/1vwhZd_NUcU1Lupr11SiD4NbE3955JjbX_BaVB_Ro-So/edit?usp=sharing">Resume</a>
+<br>
+<img src="{%static 'projects/self_portrait.png'%}">
+<br>
+
+{% for project in projects %}
+	<h2>{{ project.title }}</h2>
+	<p>{{ project.description }}</p>
+	<img src="{{project.image.url}}">
+	{%if project.url%}
+		<br><a href="{{project.url}}">Link</a>
+		{%endif%}
+{% endfor %}
+{%endblock%}
