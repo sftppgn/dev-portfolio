@@ -24,6 +24,7 @@ from music import views as musicViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
     path('blog/', include('blog.urls')),
     path('music/', musicViews.music, name='music'),
     path('music/closeFile', musicViews.closeFile, name='closeFile'),

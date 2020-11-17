@@ -1,12 +1,13 @@
 {%extends 'projects/base.html'%}
 
 {%block content%}
-<h1>it's important to not give a shit - george clairion</h1>
-<a></a><audio controls>
-    <source src="C:\Users\Rob\Documents\pythondjango\personal_site\music\temp_media\QNQBP2CWJ9.wav" type = "audio/wav">
+<h1>it's important to not give a shit - george carlin</h1>
+<a><audio controls>
+    <!---<source src="C:\Users\Rob\Documents\pythondjango\personal_site\music\temp" type = "audio/wav">--->
+    <source src="../../temp_media/outfile.wav" type = "audio/wav">
     Your browser does not support the audio element.
 </audio>
-
+</a>
 <!---<p><h2>media root {{MEDIA_ROOT}}</h2></p> --->
 <p><h2>filename {{filename}}</h2></p>
 
