@@ -91,9 +91,6 @@ def write(note,time=defaultNoteTime):
     elif "1bn" in note:
         note = wave.open("./music/acoustic_notes/g4.wav", 'r')
 
-    elif "1bn" in note:
-        note = wave.open("./music/acoustic_notes/b0.wav", 'r')
-
     elif "1cn" in note:
         note = wave.open("./music/acoustic_notes/b1.wav", 'r')
 
